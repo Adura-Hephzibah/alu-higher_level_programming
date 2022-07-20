@@ -59,7 +59,7 @@ class Square:
         """draw square using # symbol depending on value of __size"""
         if self.__size != 0:
             for row in range(self.__size):
-                for i in range(__position[0]):
+                for i in range(self.__position[0]):
                     print(" ", end="")
                 for column in range(self.__size):
                     print("#", end="")
