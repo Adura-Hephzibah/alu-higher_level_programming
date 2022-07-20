@@ -58,7 +58,7 @@ class Square:
     def my_print(self):
         """draw square using # symbol depending on value of __size"""
         if self.__size != 0:
-            for j in range(self.__size):
+            for j in range(self.__position[1]):
                 print()
             for row in range(self.__size):
                 for i in range(self.__position[0]):
