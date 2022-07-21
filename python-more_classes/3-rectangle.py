@@ -1,10 +1,6 @@
 #!/usr/bin/python3
 """
-    Module 3-rectangle.py
-    contains class Rectangle
-    with attributes width and height
-    with area and perimeter methods
-    draw rectangle with #
+Module 3-rectangle.py
 """
 
 
