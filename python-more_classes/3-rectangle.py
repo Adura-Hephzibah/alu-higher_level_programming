@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
 Module 3-rectangle.py
+prints rectangle with #
 """
 
 
