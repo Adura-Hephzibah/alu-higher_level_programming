@@ -5,7 +5,6 @@
     with attributes width and height
     with area and perimeter methods
     draw rectangle with #
-
 """
 
 
