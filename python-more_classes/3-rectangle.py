@@ -62,9 +62,9 @@ class Rectangle:
 
     def __str__(self):
         """print the rectangle with the character #"""
-        str_txt = ""
+        str_t = ""
         if self.__width == 0 or self.__height == 0:
-            return str_txt
+            return str_t
         else:
-            str_txt += "\n".join("#"*self.__height for row in range(self.__width))
-            return str_txt
+            str_t += "\n".join("#"*self.__width for _ in range(self.__height))
+            return str_t
