@@ -70,7 +70,7 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return str_t
         else:
-            str_t += "\n".join(str(type(self).print_symbol)*self.__width
+            str_t += "\n".join(str(self.print_symbol)*self.__width
                                for _ in range(self.__height))
             return str_t
 
