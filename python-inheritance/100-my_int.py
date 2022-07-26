@@ -18,8 +18,8 @@ class MyInt(int):
 
     def __eq__(self, other):
         """returns false if both are equal"""
-        return self.fig != other.fig
+        return self.fig != other
 
     def __ne__(self, other):
         """returns false if both are not equal"""
-        return self.fig == other.fig
+        return self.fig == other
