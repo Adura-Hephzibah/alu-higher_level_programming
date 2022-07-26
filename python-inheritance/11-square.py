@@ -23,4 +23,5 @@ class Square(Rectangle):
 
     def __str__(self):
         """return square description: [Square] <width>/<height>"""
-        return "[{:s}] {:d}/{:d}".format(type(self).__name__, self.__size, self.__size)
+        return "[{:s}] {:d}/{:d}".format(type(self).__name__,
+                                         self.__size, self.__size)
