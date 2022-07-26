@@ -8,4 +8,4 @@ exactly an instance
 
 def is_same_class(obj, a_class):
     """return True if obj is exactly an instance"""
-    return isinstance(obj, a_class)
+    return type(obj) == a_class
