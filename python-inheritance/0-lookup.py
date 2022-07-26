@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/python3
 """
 Module 0-lookup.py
 contains function that returns the list of available
