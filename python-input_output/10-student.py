@@ -19,11 +19,11 @@ class Student:
     def to_json(self, attrs=None):
         """public method"""
 
-        if attrs = None:
+        if attrs is None:
             return self.__dict__
         else:
             nary = {}
-            for item in attr:
+            for item in attrs:
                 if item in self.__dict__.keys():
                     nary[item] = self.__dict__[item]
             return nary
