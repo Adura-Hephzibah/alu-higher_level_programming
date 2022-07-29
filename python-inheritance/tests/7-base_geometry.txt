@@ -71,10 +71,3 @@ TypeError: age must be an integer
 Traceback (most recent call last):
 ...
 TypeError: age must be an integer
-
-Instance test
->>> type(BaseGeometry())
-<class '7-base_geometry.BaseGeometry'>
-
->>> isinstance(BaseGeometry, object)
-True
