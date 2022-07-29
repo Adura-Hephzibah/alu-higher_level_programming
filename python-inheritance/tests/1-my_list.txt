@@ -1,10 +1,12 @@
 # run test with python3 -m doctest -v ./tests/[filename].txt
 
-method imported
->>>MyList = __import__("1-my_list").MyList
+First import method to test
+>>>MyList = __import__('1-my_list').MyList
 
 
 SUCCESS CASES:
+
+
     >>> mylist = MyList()
     >>> mylist.append(1)
     >>> mylist.append(2)
@@ -16,6 +18,8 @@ SUCCESS CASES:
     [-20, 1, 2, 5]
     >>> print(mylist)
     [1, 2, 5, -20]
+
+
 
 Test with not sorted append:
     >>> mydata = MyList()
