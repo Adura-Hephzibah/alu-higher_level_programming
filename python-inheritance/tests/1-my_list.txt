@@ -1,6 +1,6 @@
 # run test with python3 -m doctest -v ./tests/[filename].txt
 
-First import method to test
+First method to test
 >>>MyList = __import__('1-my_list').MyList
 
 
