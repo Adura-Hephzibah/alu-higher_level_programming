@@ -57,7 +57,7 @@ Check if print_sorted() returns a new list
 
 Instance test:
     >>> type(MyList())
-    <class '1-mydata.MyList'>
+    <class '1-my_list.MyList'>
 
     >>> isinstance(MyList, object)
     True
