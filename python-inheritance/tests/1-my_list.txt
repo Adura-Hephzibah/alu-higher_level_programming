@@ -1,20 +1,20 @@
 # run test with python3 -m doctest -v ./tests/[filename].txt
 
 method imported
->>>MyList = __import__("1-mydata").MyList
+>>>MyList = __import__("1-my_list").MyList
 
 
 SUCCESS CASES:
-    >>> mydata = MyList()
-    >>> mydata.append(1)
-    >>> mydata.append(2)
-    >>> mydata.append(5)
-    >>> mydata.append(-20)
-    >>> print(mydata)
+    >>> mylist = MyList()
+    >>> mylist.append(1)
+    >>> mylist.append(2)
+    >>> mylist.append(5)
+    >>> mylist.append(-20)
+    >>> print(mylist)
     [1, 2, 5, -20]
-    >>> mydata.print_sorted()
+    >>> mylist.print_sorted()
     [-20, 1, 2, 5]
-    >>> print(mydata)
+    >>> print(mylist)
     [1, 2, 5, -20]
 
 Test with not sorted append:
