@@ -16,7 +16,7 @@ if __name__ == "__main__":
     dic = {"q": letter}
     r = requests.post('http://0.0.0.0:5000/search_user', data=dic)
     try:
-        dic_1 = r.json
+        dic_1 = r.json()
         if dic_1:
             print("[{}] {}".format(dic_1.get('id'), dic_1.get('name')))
         else:
