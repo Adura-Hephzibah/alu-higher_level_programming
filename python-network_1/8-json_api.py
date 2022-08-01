@@ -21,5 +21,5 @@ if __name__ == "__main__":
             print("[{}] {}".format(dic_1.get('id'), dic_1.get('name')))
         else:
             print("No result")
-    except ValueError as err:
+    except ValueError as e:
         print("Not a valid JSON")
