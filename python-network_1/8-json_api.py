@@ -15,10 +15,10 @@ if __name__ == "__main__":
         letter = argv[1]
     dic = {"q": letter}
     r = requests.post('http://0.0.0.0:5000/search_user', data=dic)
+    dic_1 = r.json()
     try:
-        dic_1 = r.json()
         if dic_1:
-            print("[{}] {}".format(dic.get('id'), dic.get('name')))
+            print("[{}] {}".format(dic_1.get('id'), dic_1.get('name')))
         else:
             print("No result")
     except ValueError:
