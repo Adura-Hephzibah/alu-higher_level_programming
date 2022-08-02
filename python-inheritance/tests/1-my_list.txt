@@ -1,0 +1,72 @@
+# run test with python3 -m doctest -v ./tests/[filename].txt
+
+First method to test
+>>> MyList = __import__('1-my_list').MyList
+
+
+SUCCESS CASES:
+
+
+    >>> mylist = MyList()
+    >>> mylist.append(1)
+    >>> mylist.append(2)
+    >>> mylist.append(5)
+    >>> mylist.append(-20)
+    >>> print(mylist)
+    [1, 2, 5, -20]
+    >>> mylist.print_sorted()
+    [-20, 1, 2, 5]
+    >>> print(mylist)
+    [1, 2, 5, -20]
+
+
+
+Test with not sorted append:
+    >>> mydata = MyList()
+    >>> mydata.append(1)
+    >>> mydata.append(-40)
+    >>> mydata.append(-300)
+    >>> mydata.append(200)
+    >>> print(mydata)
+    [1, -40, -300, 200]
+    >>> mydata.print_sorted()
+    [-300, -40, 1, 200]
+    >>> print(mydata)
+    [1, -40, -300, 200]
+
+
+Test with empty list:
+    >>> empty = MyList()
+    >>> print(empty)
+    []
+    >>> empty.print_sorted()
+    []
+
+
+Check if print_sorted() returns a new list
+    >>> data = MyList()
+    >>> data.append(-400)
+    >>> data.append(20)
+    >>> data.append(14)
+    >>> print(data)
+    [-400, 20, 14]
+    >>> id(data) is not id(data.print_sorted())
+    [-400, 14, 20]
+    True
+
+
+Instance test:
+    >>> type(MyList())
+    <class '1-my_list.MyList'>
+
+    >>> isinstance(MyList, object)
+    True
+
+    >>> isinstance(MyList, list)
+    False
+
+    >>> issubclass(MyList, list)
+    True
+
+    >>> 'print_sorted' in dir(MyList)
+    True
