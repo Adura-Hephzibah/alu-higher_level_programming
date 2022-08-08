@@ -1,6 +1,6 @@
 Test for module ``0-add_interger``
 
->>> add_integer = __import__('0-add_interger').add_integer
+>>> add_integer = __import__('0-add_integer').add_integer
 
 Test for both a(int) and b(int) positive
 >>> add_integer(1, 3)
