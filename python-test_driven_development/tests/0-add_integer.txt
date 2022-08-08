@@ -28,7 +28,7 @@ Test for Nonetype
 >>> add_integer(None)
 Traceback (most recent call last):
     ...
-TypeError: a must be an intege
+TypeError: a must be an integer
 
 Test for float overflow
 >>> add_integer(float("inf"))
@@ -45,4 +45,4 @@ Test for float NaN to integer
 >>> add_integer(float("NaN"))
 Traceback (most recent call last):
     ...
-ValueError: cannot convert float NaN to integerr
+ValueError: cannot convert float NaN to integer
