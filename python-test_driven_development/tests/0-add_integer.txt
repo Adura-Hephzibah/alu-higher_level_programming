@@ -28,4 +28,4 @@ Test for Nonetype
 >>> add_integer(None)
 Traceback (most recent call last):
     ...
-a must be an integer
+TypeError: a must be an integer
