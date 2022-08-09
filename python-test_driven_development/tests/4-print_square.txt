@@ -5,7 +5,7 @@ Test module for ``4-print_square.py``
 Test for size= integer and > 0
 >>> print_square(3)
 ###
-### 
+###
 ###
 
 Test for size= not integer
