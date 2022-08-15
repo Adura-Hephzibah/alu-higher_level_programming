@@ -106,4 +106,4 @@ class Rectangle(Base):
             elif cnt == 3:
                 self.x = arg
             elif cnt == 4:
-                self.x = arg
+                self.y = arg
