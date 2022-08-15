@@ -80,7 +80,8 @@ class Rectangle(Base):
 
     def display(self):
         """prints out rectangle instance us #"""
-        print("\n".join("#"*self.__width for _ in range(self.__height)))
+        print("\n" * self.__y + "\n".join(" " * self.__x +
+              "#" * self.__width for _ in range(self.__height)))
 
     def __str__(self):
         """
