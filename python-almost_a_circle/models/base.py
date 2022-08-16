@@ -24,6 +24,6 @@ class Base:
     def to_json_string(list_dictionaries):
         """Return a JSON string representation"""
         if list_dictionaries is not None:
-            return json.dumps(list_dictionaries)
+            return json.JSONEncoder().encode(list_dictionaries)
         else:
             return "[]"
