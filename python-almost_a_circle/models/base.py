@@ -24,5 +24,5 @@ class Base:
     def to_json_string(list_dictionaries):
         """documented"""
         if list_dictionaries is None:
-            return"[]"
+            list_dictionaries = []
         return json.dumps(list_dictionaries)
