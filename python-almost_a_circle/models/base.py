@@ -39,3 +39,13 @@ class Base:
             else:
                 new_list = [ins.to_dictionary() for ins in list_objs]
                 f.write(cls.to_json_string(new_list))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """
+        returns the list(python obj) of the JSON string representation
+        """
+        if json_string is None or len(json_string) == 0:
+            return "[]"
+        else:
+            return json.loads(json_string)
