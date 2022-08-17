@@ -37,5 +37,5 @@ class Base:
             if list_objs is None:
                 f.write("[]")
             else:
-                new_list = [vars(ins) for ins in list_objs]
+                new_list = [ins.to_dictionary() for ins in list_objs]
                 f.write(cls.to_json_string(new_list))
