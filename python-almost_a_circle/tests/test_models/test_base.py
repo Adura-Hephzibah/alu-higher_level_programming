@@ -86,14 +86,20 @@ class TestBase(unittest.TestCase):
         """test"""
         with self.assertRaises(TypeError):
             Rectangle("1", 2)
+        with self.assertRaises(TypeError):
             Rectangle(1, "2")
+        with self.assertRaises(TypeError):
             Rectangle(1, 2, "3")
+        with self.assertRaises(TypeError):
             Rectangle(1, 2, 3, "4")
 
         with self.assertRaises(ValueError):
             Rectangle(-1, 2, 3, 4)
+        with self.assertRaises(ValueError):
             Rectangle(1, -2, 3, 4)
+        with self.assertRaises(ValueError):
             Rectangle(1, 2, -3, 4)
+        with self.assertRaises(ValueError):
             Rectangle(1, 2, 3, -4)
 
     def test_area_str_display(self):
@@ -102,7 +108,9 @@ class TestBase(unittest.TestCase):
         self.assertEqual(r3.area(), 12)
         self.assertEqual(str(r3), '[Rectangle] (1) 0/0 - 3/4')
         with self.assertRaises(TypeError):
-            Rectangle(1, 2, "3", 4)
+            Rectangle(1, 2, "3", 4).display()
+            Rectangle(2, 3, 4).display()
+            Rectangle(6, 7).display()
 
     def test_create(self):
         """tests"""
