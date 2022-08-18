@@ -113,6 +113,8 @@ class TestBase(unittest.TestCase):
             Rectangle(2, 3, -4).display()
         with self.assertRaises(TypeError):
             Rectangle(6, "7").display()
+        rid = Rectangle(8, 9).display()
+        self.assertTrue(isinstance(rid, NoneType))
 
     def test_create(self):
         """tests"""
