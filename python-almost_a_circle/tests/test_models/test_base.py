@@ -110,7 +110,7 @@ class TestBase(unittest.TestCase):
         with self.assertRaises(TypeError):
             Rectangle(1, 2, "3", 4).display()
         with self.assertRaises(ValueError):
-            Rectangle(2, 3,).display()
+            Rectangle(2, 3, -4).display()
         with self.assertRaises(TypeError):
             Rectangle(6, "7").display()
 
