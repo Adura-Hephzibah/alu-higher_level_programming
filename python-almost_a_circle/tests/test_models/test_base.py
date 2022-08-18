@@ -109,8 +109,10 @@ class TestBase(unittest.TestCase):
         self.assertEqual(str(r3), '[Rectangle] (1) 0/0 - 3/4')
         with self.assertRaises(TypeError):
             Rectangle(1, 2, "3", 4).display()
-            Rectangle(2, 3, 4).display()
-            Rectangle(6, 7).display()
+        with self.assertRaises(ValueError):
+            Rectangle(2, 3,).display()
+        with self.assertRaises(TypeError):
+            Rectangle(6, "7").display()
 
     def test_create(self):
         """tests"""
