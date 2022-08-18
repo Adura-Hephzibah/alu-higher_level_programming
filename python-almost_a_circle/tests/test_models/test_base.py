@@ -107,18 +107,17 @@ class TestBase(unittest.TestCase):
         r3 = Rectangle(3, 4)
         self.assertEqual(r3.area(), 12)
         self.assertEqual(str(r3), '[Rectangle] (1) 0/0 - 3/4')
-        with self.assertRaises(TypeError):
-            Rectangle(1, 2, "3", 4).display()
+
+    def test_display(self):
+        """tests"""
         with self.assertRaises(ValueError):
-            Rectangle(2, 3, -4).display()
+            Rectangle(0, 7).display()
+
         with self.assertRaises(TypeError):
-            Rectangle(6, "7").display()
-        rid = Rectangle(8, 9).display()
-        self.assertTrue(isinstance(rid, NoneType))
+            Rectangle().display()
 
     def test_create(self):
         """tests"""
-        """returns an instance with all attributes already set"""
         dic = {"width": 3, "height": 4}
         rect = Rectangle.create(**dic)
         self.assertEqual(rect.area(), 12)
