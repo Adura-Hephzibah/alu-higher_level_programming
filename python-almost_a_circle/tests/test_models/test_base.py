@@ -12,12 +12,15 @@ class TestBase(unittest.TestCase):
     """Tests for Base"""
     def test_base_id(self):
         """no comments"""
-        self.assertTrue(Base(89), self.id == 89)
+        b1 = Base(89)
+        self.assertEqual(b1.id, 89)
 
     def test_base_id_increment(self):
         """no comments"""
-        self.assertTrue(Base(), self.id == 1)
-        self.assertTrue(Base(), self.id == 2)
+        b1 = Base()
+        self.assertEqual(b1.id, 1)
+        b2 = Base()
+        self.assertTrue(b2.id, 2)
 
     """From Python to JSON"""
     def test_to_json_string(self):
