@@ -67,10 +67,6 @@ class TestBase(unittest.TestCase):
         self.assertEqual(j_ls, [])
         self.assertTrue(isinstance(j_ls, list))
 
-
-class TestRectangle(unittest.TestCase):
-    """Tests"""
-
     def test_rec(self):
         """test"""
         r1 = Rectangle(20, 30, 2, 3, 1)
