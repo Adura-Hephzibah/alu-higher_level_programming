@@ -68,7 +68,3 @@ class TestRectangle(unittest.TestCase):
         dic = {'id': 89, 'width': 1, 'height': 2, 'x': 3, 'y': 4}
         r.update(**dic)
         self.assertEqual(r.area(), 2)
-
-
-if __name__ == "__main__":
-    unittest.main()

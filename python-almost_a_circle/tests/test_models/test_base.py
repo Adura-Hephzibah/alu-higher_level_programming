@@ -65,7 +65,3 @@ class TestBase(unittest.TestCase):
         j_ls = Base.from_json_string(j)
         self.assertEqual(j_ls, [])
         self.assertTrue(isinstance(j_ls, list))
-
-
-if __name__ == "__main__":
-    unittest.main()
