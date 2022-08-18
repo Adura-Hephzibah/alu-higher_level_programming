@@ -19,7 +19,7 @@ class TestBase(unittest.TestCase):
     def test_base_id_increment(self):
         """no comments"""
         b1 = Base()
-        self.assertEqual(b1.id, 1)
+        self.assertTrue(b1.id, 1)
         b2 = Base()
         self.assertTrue(b2.id, 2)
 
@@ -125,3 +125,7 @@ class TestBase(unittest.TestCase):
         dic = {'id': 89, 'width': 1, 'height': 2, 'x': 3, 'y': 4}
         r.update(**dic)
         self.assertEqual(r.area(), 2)
+
+
+if __name__ == "__main__":
+    unittest.main()
