@@ -116,6 +116,10 @@ class TestBase(unittest.TestCase):
         with self.assertRaises(TypeError):
             Rectangle().display()
 
+        r5 = Rectangle(1, 2, 3, 4, 5)
+        with self.assertRaises(TypeError):
+            r5.__str__(1)
+
     def test_create(self):
         """tests"""
         dic = {"width": 3, "height": 4}
