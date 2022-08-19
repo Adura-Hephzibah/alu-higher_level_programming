@@ -17,9 +17,9 @@ class TestBase(unittest.TestCase):
     def test_base_id_increment(self):
         """no comments"""
         b1 = Base()
-        self.assertTrue(b1.id, 1)
+        self.assertEqual(b1.id, 1)
         b2 = Base()
-        self.assertTrue(b2.id, 2)
+        self.assertEqual(b2.id, 2)
 
     """From Python to JSON"""
 
