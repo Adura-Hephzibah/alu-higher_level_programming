@@ -108,18 +108,6 @@ class TestBase(unittest.TestCase):
         self.assertEqual(r3.area(), 12)
         self.assertEqual(str(r3), '[Rectangle] (1) 0/0 - 3/4')
 
-    def test_display(self):
-        """tests"""
-        with self.assertRaises(ValueError):
-            Rectangle(0, 7).display()
-
-        with self.assertRaises(TypeError):
-            Rectangle().display()
-
-        r5 = Rectangle(1, 2, 3, 4, 5)
-        with self.assertRaises(TypeError):
-            r5.__str__(1)
-
     def test_create(self):
         """tests"""
         dic = {"width": 3, "height": 4}
