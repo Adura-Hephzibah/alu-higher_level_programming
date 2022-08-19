@@ -107,6 +107,12 @@ class TestBase(unittest.TestCase):
         r3 = Rectangle(3, 4)
         self.assertEqual(r3.area(), 12)
         self.assertEqual(str(r3), '[Rectangle] (1) 0/0 - 3/4')
+        rr = Rectangle(0, 2)
+        rrr = Rectangle(1, 0)
+        with assertRaises(ValueError):
+            rr.area()
+        with assertRaises(ValueError):
+            rrr.area()
 
     def test_create(self):
         """tests"""
