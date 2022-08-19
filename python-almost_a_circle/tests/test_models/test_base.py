@@ -109,7 +109,7 @@ class TestBase(unittest.TestCase):
         self.assertEqual(str(r3), '[Rectangle] (1) 0/0 - 3/4')
         with self.assertRaises(ValueError):
             Rectangle(0, 2).area()
-        with self.ssertRaises(ValueError):
+        with self.assertRaises(ValueError):
             Rectangle(1, 0).area()
 
     def test_create(self):
@@ -132,6 +132,36 @@ class TestBase(unittest.TestCase):
         dic = {'id': 89, 'width': 1, 'height': 2, 'x': 3, 'y': 4}
         r.update(**dic)
         self.assertEqual(r.area(), 2)
+
+    """Test rectangle - save to file"""
+    def test_save_to_file(self):
+        """Test"""
+        r = Rectangle(10, 7, 2, 8, 99)
+        Rectangle.save_to_file([r])
+        with open("Rectangle.json", "r") as file:
+            self.assertEqual(json.dumps([r.to_dictionary()]), file.read())
+
+    def test_none_save_to_file(self):
+        """Test"""
+        Rectangle.save_to_file(None)
+        with open("Rectangle.json", "r") as f:
+            self.assertEqual('[]', f.read())
+
+    def test_empty_save_to_file(self):
+        """Tests"""
+        Rectangle.save_to_file([])
+        with open("Rectangle.json", "r") as f:
+            self.assertEqual('[]', f.read())
+
+    """Test rectangle - load from file"""
+    def test_load_from_file(self):
+        """Test load from file"""
+        r = Rectangle(10, 11, 3, 4, 8)
+        Rectangle.save_to_file([r])
+        rec = Rectangle.load_from_file()
+        self.assertEqual(len(rec), 1)
+        for item in rec:
+            self.assertEqual(str(item), '[Rectangle] (8) 3/4 - 10/11')
 
 
 if __name__ == "__main__":
