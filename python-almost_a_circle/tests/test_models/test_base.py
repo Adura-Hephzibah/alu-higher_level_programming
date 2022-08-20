@@ -115,6 +115,8 @@ class TestRectangle(unittest.TestCase):
             Rectangle(0, 2).area()
         with self.assertRaises(ValueError):
             Rectangle(1, 0).area()
+        with self.assertRaises(TypeError):
+            Rectangle(1, 2).display(1)
 
     def test_create(self):
         """tests"""
