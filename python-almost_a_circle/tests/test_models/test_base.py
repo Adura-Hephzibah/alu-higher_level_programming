@@ -4,6 +4,8 @@ from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
 import json
+from io import StringIO
+from contextlib import redirect_stdout
 
 
 class TestBase(unittest.TestCase):
@@ -106,7 +108,7 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(ValueError):
             Rectangle(1, 2, 3, -4)
 
-    def test_area_str_display(self):
+    def test_area_str(self):
         """test"""
         r3 = Rectangle(3, 4, id=1)
         self.assertEqual(r3.area(), 12)
@@ -115,8 +117,17 @@ class TestRectangle(unittest.TestCase):
             Rectangle(0, 2).area()
         with self.assertRaises(ValueError):
             Rectangle(1, 0).area()
-        with self.assertRaises(TypeError):
-            Rectangle(1, 2).display(1)
+
+    def test_display(self):
+        """Test method: display"""
+        with StringIO() as bufr, redirect_stdout(bufr):
+            Rectangle(4, 3).display()
+            a = bufr.getvalue()
+        self.assertEqual(a, '####\n####\n####\n')
+        with StringIO() as bufr, redirect_stdout(bufr):
+            Rectangle(5, 3, 1, 2).display()
+            b = bufr.getvalue()
+        self.assertEqual(b, '\n\n #####\n #####\n #####\n')
 
     def test_create(self):
         """tests"""
