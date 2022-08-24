@@ -107,7 +107,7 @@ class Rectangle(Base):
                 elif cnt == 3:
                     self.x = arg
                 elif cnt == 4:
-                    self.y = v
+                    self.y = arg
         else:
             if "id" in kwargs:
                 self.id = kwargs["id"]
