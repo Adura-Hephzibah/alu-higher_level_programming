@@ -6,6 +6,6 @@ if (isNaN(side)) {
   console.log('Missing size');
 } else {
   for (let i = 1; i <= side; i++) {
-    console.log('x'.repeat(side));
+    console.log('X'.repeat(side));
   }
 }
